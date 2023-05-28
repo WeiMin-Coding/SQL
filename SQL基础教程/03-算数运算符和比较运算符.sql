@@ -96,4 +96,18 @@ where product_type = '厨房用具'
 select product_name, product_type, sale_price
 from product
 where product_type = '厨房用具'
-  or sale_price >= 3000;
+   or sale_price >= 3000;
+
+select product_name, product_type, regist_date
+from product
+where product_type = '办公用品'
+  and (regist_date = '2009-09-11'
+    or regist_date = '2009-09-20');
+
+select product_name, regist_date
+from product
+where regist_date > '2009-04-28';
+
+select *
+from product
+where purchase_price > null;
